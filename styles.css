@@ -293,7 +293,7 @@ IMAGES
 
 @media (max-width: 480px) {
   .sticker {
-    width: 14em; /* Smaller size for mobile */
+    width: 10em; /* Smaller size for mobile */
   }
 
   /* Adjust positions for mobile view */
