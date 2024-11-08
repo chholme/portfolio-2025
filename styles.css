@@ -208,7 +208,7 @@ IMAGES
 
 .sticker {
   position: absolute; /* Position stickers absolutely within the container */
-  width: 17em; /* Adjust size as needed */
+  width: 15em; /* Adjust size as needed */
   height: auto; /* Maintain aspect ratio */
   z-index: -1;
   opacity: 0.7;
@@ -232,6 +232,92 @@ IMAGES
 .sticker4 {
   top: 650px; /* Adjust vertical position */
   right: 50px; /* Adjust horizontal position */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 992px) {
+  .sticker {
+    width: 14em; /* Smaller size for tablets and small desktops */
+  }
+
+  .sticker1 {
+    top: 300px;
+    left: 10px;
+  }
+
+  .sticker2 {
+    top: 50px;
+    right: 50px;
+    display: none;
+  }
+
+  .sticker3 {
+    top: 0px;
+    left: 30px;
+    display: none;
+  }
+
+  .sticker4 {
+    top: 500px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sticker {
+    width: 14em; /* Smaller size for tablets and small desktops */
+  }
+
+  .sticker1 {
+    top: 300px;
+    left: 10px;
+  }
+
+  .sticker2 {
+    top: 50px;
+    right: 50px;
+    display: none;
+  }
+
+  .sticker3 {
+    top: 0px;
+    left: 30px;
+    display: none;
+  }
+
+  .sticker4 {
+    top: 500px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sticker {
+    width: 14em; /* Smaller size for mobile */
+  }
+
+  /* Adjust positions for mobile view */
+  .sticker1 {
+    top: 250px;
+    left: 5px;
+  }
+
+  .sticker2 {
+    top: 30px;
+    right: 20px;
+    display: none;
+  }
+
+  .sticker3 {
+    top: 1px;
+    left: 15px;
+    display: none;
+  }
+
+  .sticker4 {
+    top: 400px;
+    right: 10px;
+  }
 }
 
 img.rounded-circle {
