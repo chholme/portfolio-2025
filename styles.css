@@ -139,7 +139,7 @@ SECTION STYLING
 
 /*
 
-BUTTON
+BUTTONS
 designed by website: https://getcssscan.com/css-buttons-examples
 Button #52
 
@@ -185,16 +185,50 @@ Button #52
   left: 0px;
 }
 
-/*
-.button {
-  text-decoration: none;
-  color: black;
-  border: solid rgba(0, 0, 0, 0.251) 2px;
-  border-radius: 25px;
-  padding: 7px;
+.submit-button {
+  width: 100%;
+  transition: background-color 0.3s;
+
+  font-family: "Indie Flower", cursive;
   font-size: 18px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  border-radius: 25px;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
-*/
+
+.submit-button:after {
+  content: "";
+  background-color: #4c6aff9e;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+  border-radius: 25px;
+}
+
+.submit-button:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+/* Button hover effect */
+.submit.button:hover {
+  background-color: #4c6aff9e;
+  border-radius: 25px;
+  border: 1px solid black;
+}
 
 /*
 
@@ -298,7 +332,7 @@ IMAGES
 
   /* Adjust positions for mobile view */
   .sticker1 {
-    top: 250px;
+    top: 350px;
     left: 5px;
   }
 
@@ -315,7 +349,7 @@ IMAGES
   }
 
   .sticker4 {
-    top: 400px;
+    top: 500px;
     right: 10px;
   }
 }
@@ -346,41 +380,63 @@ PORTFOLIO GALLERY STYLING
   max-width: 1000px;
 }
 
-/* Hidden project details */
-.details {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.3s ease; /* Smooth fade-in */
-  padding: 20px;
-  text-align: center;
+.card img {
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for scaling and opacity */
 }
 
-/* Show details on hover */
-.gallery-item:hover .details {
-  opacity: 1; /* Show details */
+.card:hover img {
+  transform: scale(1.05); /* Slightly scale up the image */
+  opacity: 0.9; /* Make the image slightly dimmer */
 }
 
-.details h3 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.details p {
-  font-size: 1em;
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
 }
 
 /*
 
-IFRAME STYLING
+CONTACT FORM STYLING
 
 */
+
+.section4 {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+/* Form title */
+.form-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Label styling */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Input and textarea styling */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: vertical;
+}
