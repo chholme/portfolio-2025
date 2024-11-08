@@ -140,9 +140,52 @@ SECTION STYLING
 /*
 
 BUTTON
+designed by website: https://getcssscan.com/css-buttons-examples
+Button #52
 
 */
 
+.button {
+  font-family: "Indie Flower", cursive;
+  font-size: 18px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  border-radius: 25px;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:after {
+  content: "";
+  background-color: #ffe44c9e;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+  border-radius: 25px;
+}
+
+.button:hover {
+  border-radius: 25px;
+  border: 1px solid black;
+}
+
+.button:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+/*
 .button {
   text-decoration: none;
   color: black;
@@ -151,6 +194,7 @@ BUTTON
   padding: 7px;
   font-size: 18px;
 }
+*/
 
 /*
 
@@ -164,7 +208,7 @@ IMAGES
 
 .sticker {
   position: absolute; /* Position stickers absolutely within the container */
-  width: 30em; /* Adjust size as needed */
+  width: 17em; /* Adjust size as needed */
   height: auto; /* Maintain aspect ratio */
   z-index: -1;
   opacity: 0.7;
@@ -177,17 +221,17 @@ IMAGES
 
 .sticker2 {
   top: 70px; /* Adjust vertical position */
-  right: -100px; /* Adjust horizontal position */
+  right: 100px; /* Adjust horizontal position */
 }
 
 .sticker3 {
   top: 3px; /* Adjust vertical position */
-  left: -50px; /* Adjust horizontal position */
+  left: 50px; /* Adjust horizontal position */
 }
 
 .sticker4 {
   top: 650px; /* Adjust vertical position */
-  right: -50px; /* Adjust horizontal position */
+  right: 50px; /* Adjust horizontal position */
 }
 
 img.rounded-circle {
