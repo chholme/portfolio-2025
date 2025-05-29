@@ -1,31 +1,45 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'vendor/autoload.php';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get the form fields and sanitize the input data
+   
     $name = htmlspecialchars(trim($_POST["name"]));
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
     $message = htmlspecialchars(trim($_POST["message"]));
 
-    // Check that all form fields are filled out
+    // Validate form fields
     if (empty($name) || empty($email) || empty($message)) {
         $error_message = "Please fill in all fields.";
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $error_message = "Invalid email format.";
     } else {
-        // Email details
-        $to = "charitybeholmes@gmail.com";  // Replace with your email address
-        $subject = "New Contact Form Message";
-        $email_content = "Name: $name\n";
-        $email_content .= "Email: $email\n\n";
-        $email_content .= "Message:\n$message\n";
-        $headers = "From: $email";
+        $mail = new PHPMailer(true);
+        try {
+            //Server settings
+            $mail->isSMTP();
+            $mail->Host = 'smtp.gmail.com';
+            $mail->SMTPAuth = true;
+            $mail->Username = 'charitybeholmes@gmail.com';
+            $mail->Password = 'uvtaqvdqacbnyvrs';
+            $mail->SMTPSecure = 'tls';
+            $mail->Port = 587;
 
-        // Send the email
-        if (mail($to, $subject, $email_content, $headers)) {
-            // Redirect to a thank you page if email is sent successfully
+            //Recipients
+            $mail->setFrom('charitybeholmes@gmail.com', 'Charity Holmes');
+            $mail->addAddress('charitybeholmes@gmail.com');
+
+            // Content
+            $mail->Subject = 'New Contact Form Message';
+            $mail->Body    = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+
+            $mail->send();
             header("Location: index.html");
             exit;
-        } else {
-            $error_message = "Sorry, but the message could not be sent. Please try again later.";
+        } catch (Exception $e) {
+            $error_message = "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
     }
 }

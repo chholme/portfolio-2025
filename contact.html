@@ -21,7 +21,7 @@
     ></script>
     <title>Charity's Website</title>
   </head>
-  <body>
+  <body class="contact-page-body">
     <div class="background-layer">
       <img
         src="images/yellowflower-bg.png"
@@ -106,112 +106,36 @@
       </nav>
     --></header>
 
-    <!-- Section 3: Portfolio Gallery -->
-    <section class="section3 container-fluid">
-      <h1 class="text-center">Portfolio Highlights</h1>
+    <section class="section4 container">
       <div class="row">
-        <!-- Gallery Item 1 -->
-        <div class="col-md-4">
-          <div class="card">
-            <a href="https://zion.luddy.indiana.edu/info-capstone-2024/waste-warrior">
-              <img
-                src="images/project1-page1.png"
-                alt="Project 1"
-                class="img-fluid"
-              />
-            </a>
-            <div class="card-body">
-              <h5 class="card-title">Project 1</h5>
-              <p class="card-text">Description about Project 1.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Gallery Item 2 -->
-        <div class="col-md-4">
-          <div class="card">
-            <a href="https://chholme.github.io/Charity-Portfolio/">
-              <img
-                src="images/project2-page1.png"
-                alt="Project 2"
-                class="img-fluid"
-              />
-            </a>
-            <div class="card-body">
-              <h5 class="card-title">Project 2</h5>
-              <p class="card-text">Description about Project 2.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Gallery Item 3 -->
-        <div class="col-md-4">
-          <div class="card">
-            <a href="https://pages.github.iu.edu/National-Society-of-Black-Engineers-IUB/NSBE-Website-2023-2024/index.html">
-              <img
-                src="images/project3-nsbe.png"
-                alt="Project 3"
-                class="img-fluid"
-              />
-            </a>
-            <div class="card-body">
-              <h5 class="card-title">Project 3</h5>
-              <p class="card-text">Description about Project 3.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+        <h1 class="text-center">Get in Touch</h1>
+        <p class="text-center">
+          Interested in collaborating or learning more? Drop me a message!
+        </p>
 
-      <div class="row">
-        <!-- Gallery Item 4 -->
-        <div class="col-md-4">
-          <div class="card">
-            <a href="https://chholme.github.io/Wordle/">
-              <img
-                src="images/project4-wordle.png"
-                alt="Project 4"
-                class="img-fluid"
-              />
-            </a>
-            <div class="card-body">
-              <h5 class="card-title">Wordle</h5>
-              <p class="card-text">Description about Project 4.</p>
-            </div>
-          </div>
+        <div class="col-md-6">
+          <img src="images/contactme-icon.png" class="img-fluid" />
         </div>
-        <!-- Gallery Item 5 -->
-        <div class="col-md-4">
-          <div class="card">
-            <a href="https://chholme.github.io/Bingo/">
-              <img
-                src="images/project5-bingo.png"
-                alt="Project 5"
-                class="img-fluid"
-              />
-            </a>
-            <div class="card-body">
-              <h5 class="card-title">Bingo</h5>
-              <p class="card-text">Description about Project 5.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Gallery Item 6 -->
-        <div class="col-md-4">
-          <div class="card">
-            <a href="https://chholme.github.io/Number-Guessing-Game1/">
-              <img
-                src="images/project6-numberguess1.png"
-                alt="Project 6"
-                class="img-fluid"
-              />
-            </a>
-            <div class="card-body">
-              <h5 class="card-title">Number Guessing Game</h5>
-              <p class="card-text">Description about Project 6.</p>
-            </div>
-          </div>
+
+        <div class="col-md-6">
+          <form action="contact.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+            <br /><br />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <br /><br />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <br /><br />
+
+            <button type="submit" class="submit-button">Send a Message</button>
+          </form>
         </div>
       </div>
     </section>
-
     <footer></footer>
 
     <!-- Bootstrap JS (CDN) and its dependencies -->
