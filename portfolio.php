@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,7 +22,7 @@
     ></script>
     <title>Charity's Website</title>
   </head>
-  <body class="game-page-body">
+  <body>
     <div class="background-layer">
       <img
         src="images/yellowflower-bg.png"
@@ -47,70 +48,65 @@
     </div>
 
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="home.html">
-            <i class="logo fa-solid fa-heart fa-2xl"></i>
-            <span class="logo-name"> Charity Holmes</span>
-          </a>
-
-          <!-- Navigation Toggler/collapsible Button -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <!-- Navigation Collapsible content -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="portfolio.html">Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="games.html">Games</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <!-- Heart Logo which also links to the home page 
-        <div class="col-6 d-flex align-items-center">
-          <div class="nav-logo">
-            <a href="home.html"
-              ><i class="logo fa-solid fa-heart fa-2xl"></i
-            ></a>
-            <h1 class="logo-name">Charity Holmes</h1>
-          </div>
-        </div>
-
-        <ul class="col-6 d-flex justify-content-end">
-          <li class="menu-item"><a href="home.html">Home</a></li>
-          <li class="menu-item"><a href="portfolio.html">Portfolio</a></li>
-          <li class="menu-item"><a href="blog.html">Blog</a></li>
-          <li class="menu-item"><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    --></header>
+      <?php include 'navbar.php'; ?>
+    </header>
 
     <!-- Section 3: Portfolio Gallery -->
     <section class="section3 container-fluid">
-      <h1 class="text-center">Games</h1>
+      <h1 class="text-center">Portfolio Highlights</h1>
       <div class="row">
-        <!-- Game Item 1 -->
+        <!-- Gallery Item 1 -->
+        <div class="col-md-4">
+          <div class="card">
+            <a href="https://zion.luddy.indiana.edu/info-capstone-2024/waste-warrior">
+              <img
+                src="images/project1-page1.png"
+                alt="Project 1"
+                class="img-fluid"
+              />
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">Project 1</h5>
+              <p class="card-text">Description about Project 1.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Gallery Item 2 -->
+        <div class="col-md-4">
+          <div class="card">
+            <a href="https://chholme.github.io/Charity-Portfolio/">
+              <img
+                src="images/project2-page1.png"
+                alt="Project 2"
+                class="img-fluid"
+              />
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">Project 2</h5>
+              <p class="card-text">Description about Project 2.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Gallery Item 3 -->
+        <div class="col-md-4">
+          <div class="card">
+            <a href="https://pages.github.iu.edu/National-Society-of-Black-Engineers-IUB/NSBE-Website-2023-2024/index.html">
+              <img
+                src="images/project3-nsbe.png"
+                alt="Project 3"
+                class="img-fluid"
+              />
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">Project 3</h5>
+              <p class="card-text">Description about Project 3.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Gallery Item 4 -->
         <div class="col-md-4">
           <div class="card">
             <a href="https://chholme.github.io/Wordle/">
@@ -126,7 +122,7 @@
             </div>
           </div>
         </div>
-        <!-- Game Item 2 -->
+        <!-- Gallery Item 5 -->
         <div class="col-md-4">
           <div class="card">
             <a href="https://chholme.github.io/Bingo/">
@@ -142,7 +138,7 @@
             </div>
           </div>
         </div>
-        <!-- Game Item 3 -->
+        <!-- Gallery Item 6 -->
         <div class="col-md-4">
           <div class="card">
             <a href="https://chholme.github.io/Number-Guessing-Game1/">

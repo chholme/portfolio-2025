@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -47,64 +48,45 @@
     </div>
 
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="home.html">
-            <i class="logo fa-solid fa-heart fa-2xl"></i>
-            <span class="logo-name"> Charity Holmes</span>
-          </a>
+      <?php include 'navbar.php'; ?>
+    </header>
 
-          <!-- Navigation Toggler/collapsible Button -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+    <!-- Section 1 -->
+    <section class="section1 container text-center">
+      <div class="row">
+        <div class="col">
+          <h1>Hi, I'm Charity Holmes a Web Developer & Designer</h1>
+          <p>
+            I create modern user-centered websites with seamless functionality
+          </p>
+          <a class="btn button" href="portfolio.html">View My Work</a>
+        </div>
+      </div>
+    </section>
 
-          <!-- Navigation Collapsible content -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="portfolio.html">Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="games.html">Games</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-            </ul>
+    <!-- Section 2 -->
+    <section class="section2 container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center">
+          <img
+            src="images/IMG_9582.jpg"
+            class="img-fluid rounded-circle"
+            alt="Charity"
+          />
+        </div>
+        <div class="col-md-6">
+          <div class="section2-aboutme">
+            <p>
+              I hold a degree in Informatics with a focus in web development and
+              human centered computing
+            </p>
+            <a class="btn button" href="https://www.linkedin.com/in/charityholmes/"
+              >LinkedIn</a
+            >
           </div>
         </div>
-      </nav>
-
-      <!-- Heart Logo which also links to the home page 
-        <div class="col-6 d-flex align-items-center">
-          <div class="nav-logo">
-            <a href="home.html"
-              ><i class="logo fa-solid fa-heart fa-2xl"></i
-            ></a>
-            <h1 class="logo-name">Charity Holmes</h1>
-          </div>
-        </div>
-
-        <ul class="col-6 d-flex justify-content-end">
-          <li class="menu-item"><a href="home.html">Home</a></li>
-          <li class="menu-item"><a href="portfolio.html">Portfolio</a></li>
-          <li class="menu-item"><a href="blog.html">Blog</a></li>
-          <li class="menu-item"><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    --></header>
+      </div>
+    </section>
 
     <!-- Section 3: Portfolio Gallery -->
     <section class="section3 container-fluid">
@@ -159,59 +141,38 @@
           </div>
         </div>
       </div>
+    </section>
 
+    <section class="section4 container">
       <div class="row">
-        <!-- Gallery Item 4 -->
-        <div class="col-md-4">
-          <div class="card">
-            <a href="https://chholme.github.io/Wordle/">
-              <img
-                src="images/project4-wordle.png"
-                alt="Project 4"
-                class="img-fluid"
-              />
-            </a>
-            <div class="card-body">
-              <h5 class="card-title">Wordle</h5>
-              <p class="card-text">Description about Project 4.</p>
-            </div>
-          </div>
+        <h1 class="text-center">Get in Touch</h1>
+        <p class="text-center">
+          Interested in collaborating or learning more? Drop me a message!
+        </p>
+
+        <div class="col-md-6">
+          <img src="images/contactme-icon.png" class="img-fluid" />
         </div>
-        <!-- Gallery Item 5 -->
-        <div class="col-md-4">
-          <div class="card">
-            <a href="https://chholme.github.io/Bingo/">
-              <img
-                src="images/project5-bingo.png"
-                alt="Project 5"
-                class="img-fluid"
-              />
-            </a>
-            <div class="card-body">
-              <h5 class="card-title">Bingo</h5>
-              <p class="card-text">Description about Project 5.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Gallery Item 6 -->
-        <div class="col-md-4">
-          <div class="card">
-            <a href="https://chholme.github.io/Number-Guessing-Game1/">
-              <img
-                src="images/project6-numberguess1.png"
-                alt="Project 6"
-                class="img-fluid"
-              />
-            </a>
-            <div class="card-body">
-              <h5 class="card-title">Number Guessing Game</h5>
-              <p class="card-text">Description about Project 6.</p>
-            </div>
-          </div>
+
+        <div class="col-md-6">
+          <form action="contact.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+            <br /><br />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <br /><br />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <br /><br />
+
+            <button type="submit" class="submit-button">Send a Message</button>
+          </form>
         </div>
       </div>
     </section>
-
     <footer></footer>
 
     <!-- Bootstrap JS (CDN) and its dependencies -->

@@ -140,6 +140,18 @@ SECTION STYLING
   margin-top: 130px;
 }
 
+.section4 {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+.contact-page-body .section4 {
+  margin-top: 120px;
+}
+
+.login-section {
+  padding-top:100px;
+}
+
 /*
 
 BUTTONS
@@ -402,14 +414,6 @@ CONTACT FORM STYLING
 
 */
 
-.section4 {
-  padding-top: 5em;
-  padding-bottom: 5em;
-}
-.contact-page-body .section4 {
-  margin-top: 100px;
-}
-
 .form-container {
   max-width: 500px;
   margin: 0 auto;
@@ -446,4 +450,17 @@ textarea {
   border-radius: 5px;
   font-size: 16px;
   resize: vertical;
+}
+
+/* 
+
+LOGIN FORM STYLING
+
+*/
+
+
+.form-box{
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
 }

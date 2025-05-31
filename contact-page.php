@@ -38,73 +38,12 @@
         class="sticker sticker3"
         alt="Sticker 3"
       />
-      <img
-        src="images/pinkflower-bg.png"
-        class="sticker sticker4"
-        alt="Sticker 4"
-      />
       <!-- Add more stickers as needed -->
     </div>
 
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="home.html">
-            <i class="logo fa-solid fa-heart fa-2xl"></i>
-            <span class="logo-name"> Charity Holmes</span>
-          </a>
-
-          <!-- Navigation Toggler/collapsible Button -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <!-- Navigation Collapsible content -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="portfolio.html">Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="games.html">Games</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <!-- Heart Logo which also links to the home page 
-        <div class="col-6 d-flex align-items-center">
-          <div class="nav-logo">
-            <a href="home.html"
-              ><i class="logo fa-solid fa-heart fa-2xl"></i
-            ></a>
-            <h1 class="logo-name">Charity Holmes</h1>
-          </div>
-        </div>
-
-        <ul class="col-6 d-flex justify-content-end">
-          <li class="menu-item"><a href="home.html">Home</a></li>
-          <li class="menu-item"><a href="portfolio.html">Portfolio</a></li>
-          <li class="menu-item"><a href="blog.html">Blog</a></li>
-          <li class="menu-item"><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    --></header>
+      <?php include 'navbar.php'; ?>
+    </header>
 
     <section class="section4 container">
       <div class="row">
